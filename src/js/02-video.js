@@ -14,7 +14,6 @@ const getSavedTime = () => {
 player
   .setCurrentTime(getSavedTime())
   .then(function (data) {
-   
   })
   .catch(function (error) {
     switch (error.name) {
