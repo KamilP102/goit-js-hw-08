@@ -5,9 +5,7 @@ inputEl = document.querySelector('input');
 textEl = document.querySelector('textarea');
 const STORAGE_KEY = 'feedback-form-state';
 
-
-
-formElement.addEventListener('input',_.throttle((saveMail),500));
+formElement.addEventListener('input', _.throttle(saveMail, 500));
 
 function saveMail(e) {
   e.preventDefault();
@@ -22,8 +20,8 @@ const getSavedInput = localStorage.getItem(STORAGE_KEY);
 const parseInputs = JSON.parse(getSavedInput);
 
 function updateOutput() {
-  inputEl.value = parseInputs.Email;
-  textEl.value = parseInputs.Message;
+  inputEl.value = parseInputs.Email 
+  textEl.value = parseInputs.Message 
 }
 updateOutput();
 
@@ -33,5 +31,5 @@ function submitForm(e) {
   e.preventDefault();
   console.log(parseInputs);
   localStorage.clear();
-  formElement.reset()
+  formElement.reset();
 }
