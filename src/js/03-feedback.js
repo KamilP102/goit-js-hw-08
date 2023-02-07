@@ -11,7 +11,7 @@ function saveMail(e) {
   e.preventDefault();
   formInput = {
     Email: inputEl.value,
-    Message: textEl.value,
+    Message: textEl.value, 
   };
   localStorage.setItem(STORAGE_KEY, JSON.stringify(formInput));
 }
