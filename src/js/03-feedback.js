@@ -11,6 +11,8 @@ const updateOutput = () => {
   emailEl.value = data.email || '';
   messageEl.textContent = data.message;
 };
+updateOutput();
+
 
 const addData = {
   email: '',
@@ -30,6 +32,7 @@ const submitForm = e => {
   formEl.reset();
   messageEl.innerHTML = '';
 };
+
 
 formEl.addEventListener('input', _.throttle(saveData, 500));
 btnEl.addEventListener('click', submitForm);
